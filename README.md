@@ -1,2 +1,2 @@
-# AI-detection-System
-Hack The Throne 
+# AI-Early disease detection-System
+
