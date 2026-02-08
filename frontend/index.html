@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Diabetes Detection System</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <!-- ===== LANDING PAGE ===== -->
+  <section id="landing" class="screen active fade-in">
+    <div class="landing-container">
+
+      <div class="landing-text">
+        <img src="iiit-una-logo.jpeg" class="logo" alt="IIIT Una Logo">
+        <h1>AI Diabetes Detection System</h1>
+        <p class="motive">
+          A healthcare-focused AI system designed to assist in early disease
+          detection and promote preventive medical care.
+        </p>
+        <p class="college">Indian Institute of Information Technology, Una</p>
+        <button onclick="startApp()">GET STARTED</button>
+      </div>
+
+      <div class="landing-image">
+        <img src="doctor.jpeg" alt="Doctor Illustration">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== DASHBOARD PAGE ===== -->
+  <section id="formPage" class="screen slide-in">
+
+    <div class="dashboard">
+
+      <h2 class="dashboard-title">Patient Health Parameters</h2>
+
+      <form id="healthForm" class="dashboard-form">
+
+        <div class="input-box">
+          <label>Age</label>
+          <input type="number" required>
+        </div>
+
+        <div class="input-box">
+          <label>Gender</label>
+          <select required>
+            <option value="">Select</option>
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        </div>
+
+        <div class="input-box">
+          <label>Blood Pressure</label>
+          <input type="text" placeholder="120/80">
+        </div>
+
+        <div class="input-box">
+         <label>Height (cm)</label>
+         <input type="number" required>
+        </div>
+
+        <div class="input-box">
+         <label>Weight (kg)</label>
+         <input type="number" required>
+        </div>
+
+
+        <div class="input-box">
+          <label>Glucose Level</label>
+          <input type="number">
+        </div>
+
+        <button type="submit" class="scan-btn">
+          ANALYZE HEALTH DATA
+        </button>
+
+      </form>
+
+      <div id="result" class="result-panel hidden"></div>
+
+    </div>
+  </section>
+
+  <!-- ===== FIXED FOOTER (BOTH PAGES) ===== -->
+  <footer class="thinkers-footer">
+    <span>Our Thinkers:</span>
+    <span>Ishir Singhal</span> |
+    <span>Shashi Kumar</span> |
+    <span>Ayush Srivastava</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -30,7 +30,6 @@ def predict_risk(data):
         risk = "Medium"
     else:
         risk = "High"
-
     return {
     "risk": risk,
     "confidence": float(round(probability * 100, 2))
