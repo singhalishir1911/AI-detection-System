@@ -195,13 +195,8 @@ document.getElementById("healthForm").addEventListener("submit", async function 
   result.innerHTML = `
     <h3>Personalized Health Overview</h3>
 
-    <p><strong>Calculated BMI:</strong> ${bmi} (${bmiCategory})</p>
-    ${bmiAdvice}
-
-    <hr>
-
-    <p><strong>Blood Pressure Assessment:</strong> ${bpCategory}</p>
-    ${bpAdvice}
+    <p><strong>AI-Based Diabetes Risk:</strong> ${diabetesRisk}</p>
+    ${diabetesAdvice}
 
     <hr>
 
@@ -209,9 +204,13 @@ document.getElementById("healthForm").addEventListener("submit", async function 
     ${glucoseAdvice}
 
     <hr>
+    <p><strong>Calculated BMI:</strong> ${bmi} (${bmiCategory})</p>
+    ${bmiAdvice}
 
-    <p><strong>AI-Based Diabetes Risk:</strong> ${diabetesRisk}</p>
-    ${diabetesAdvice}
+    <hr>
+
+    <p><strong>Blood Pressure Assessment:</strong> ${bpCategory}</p>
+    ${bpAdvice}
 
     <hr>
 
@@ -231,4 +230,14 @@ function showError(message) {
     <p>${message}</p>
   `;
   result.classList.remove("hidden");
+  /* ===== RESET RESULT ON INPUT CHANGE ===== */
+const formInputs = document.querySelectorAll("#healthForm input, #healthForm select");
+
+formInputs.forEach(input => {
+  input.addEventListener("input", () => {
+    const result = document.getElementById("result");
+    result.classList.add("hidden");
+    result.innerHTML = "";
+  });
+});
 }
